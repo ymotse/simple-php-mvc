@@ -1,0 +1,63 @@
+{% extends 'templates/template_default.twig' %}
+
+{% set title_page = 'Login' %}
+
+
+{% block content %}
+
+<div>
+
+	<div class="container-fluid">
+		
+		<div class="row m-2">
+			
+			<div class="col-sm-12 p-2 bg-white">
+
+				<h3>PHP MVC</h3>
+
+				<p>This is a basic project structure of MVC Design Pattern in PHP language.</p>
+
+				<a href="?ref=welcome" title="Go to Welcome page">[Welcome]</a>
+
+			</div>
+
+		</div>
+
+		<div class="row m-2">
+			
+			<div class="col-sm-12 p-2 bg-white">
+
+				<h5 class="text-primary">Form authentication example (MySQL)</h5> 
+
+				<hr>
+
+				<form method="POST" action="?ref=auth">
+					<div class="form-group">
+						<label for="username">Username</label>
+						<input type="text" class="form-control form-control-sm" id="username" name="username" placeholder="Username" required>
+					</div>
+					<div class="form-group">
+						<label for="password">Password</label>
+						<input type="password" class="form-control form-control-sm" id="password" name="password" placeholder="Password" required>
+					</div>
+
+					<button type="submit" class="btn btn-outline-primary">Submit</button>
+				</form>
+
+				{% if err == 1 %}
+				<br>
+				<div class="alert alert-danger" role="alert">
+					Invalid User/Pass or inactive user
+				</div>
+				{% endif %}
+
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+
+{% endblock %}

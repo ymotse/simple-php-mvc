@@ -1,0 +1,50 @@
+{% extends 'templates/template_default.twig' %}
+
+{% set title_page = 'Bcrypt Generator' %}
+
+
+{% block content %}
+
+<style>
+	body {
+		background-color: white;
+	}
+</style>
+
+<div>
+	
+	<div class="container-fluid">
+		
+		{% if crypted is not empty %}
+		<div class="row m-4">
+			<div class="col">
+				<h3> <strong>Not encrypted:</strong> {{ no_crypted }}</h3>
+				<h3> <strong>Encrypted:</strong> {{ crypted }}</h3>
+			</div>
+		</div>
+		{% endif %}
+		
+		<div class="row m-4">
+			<div class="col">
+				<form method="POST" action="?ref=bcryptgenerator">
+					<div class="form-group">
+						<label for="text_crypt">Type your String:</label>
+						<input type="text" class="form-control" id="text_crypt" name="text_crypt" required>
+					</div>
+					<button type="submit" class="btn btn-primary">Encrypt</button>
+				</form>
+			</div>
+		</div>
+		
+		
+		<div class="row m-4">
+			<div class="col">
+				<a href="?ref=welcome">Home</a>
+			</div>
+		</div>
+		
+	</div>
+	
+</div>
+
+{% endblock %}

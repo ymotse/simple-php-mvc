@@ -1,0 +1,71 @@
+{% extends 'templates/template_default.twig' %}
+
+{% set title_page = 'Tests DB' %}
+
+
+{% block content %}
+
+<style>
+	body {
+		background-color: white;
+	}
+</style>
+
+<div>
+	
+	<div class="container-fluid">
+		
+		<div class="row m-4">
+			<div class="col">
+				<h3>Oracle, MySQL, and MongoDB Connection Tests</h3>
+			</div>
+		</div>
+		
+		<div class="row m-4">
+			
+			{% if cn_oracle == true %}
+				<div class="col alert alert-success" role="alert">	
+					<b>Oracle</b> connection successful!
+				</div>
+				{% else %}
+				<div class="col alert alert-danger" role="alert">	
+					<b>Oracle</b> connection fail. Verify the properties and try again.
+				</div>
+			{% endif %}
+		</div>
+		
+		<div class="row m-4">
+			{% if cn_mysql == true %}
+				<div class="col alert alert-success" role="alert">	
+					<b>MySQL</b> connection successful!
+				</div>
+				{% else %}
+				<div class="col alert alert-danger" role="alert">	
+					<b>MySQL</b> connection fail. Verify the properties and try again.
+				</div>
+			{% endif %}
+		</div>
+		
+		<div class="row m-4">
+			{% if cn_mongo == true %}
+				<div class="col alert alert-success" role="alert">	
+					<b>MongoDB</b> connection successful!
+				</div>
+				{% else %}
+				<div class="col alert alert-danger" role="alert">	
+					<b>MongoDB</b> connection fail. Verify the properties and try again.
+				</div>
+			{% endif %}
+		</div>
+			
+		<div class="row m-4">
+			<div class="col">
+				<a href="?ref=welcome">Home</a>
+			</div>
+		</div>
+		
+	</div>
+	
+</div>
+
+{% endblock %}

@@ -1,0 +1,50 @@
+{% extends 'templates/template_default.twig' %}
+
+{% set title_page = 'Error'  %}
+
+
+{% block content %}
+
+
+<div class="container-fluid">
+
+	<div class="row m-4">
+
+		<div class="col-xs-12">
+
+			<div class="alert alert-danger" role="alert">
+				
+				<div class="mx-3 mt-3 mb-5">
+					<h2>Sorry :(</h2>
+				</div>
+
+				<div class="mx-3 mt-3 mb-5">
+					<h3>An unexpected error has occurred.</h3>
+				</div>
+
+				<div class="mx-3">
+					<h5>{{ msg }}</h5>
+				</div>
+				
+				<hr>
+				
+				<br>
+				
+				<div class="mx-3 mt-3 mb-5">
+					<h5>
+						Please contact system <a href="mailto:{{ cfg.app_email_admin }}">administrator</a>.
+					</h5>
+				</div>
+				
+				<div class="mx-3 my-3 h5">
+					<a href="?ref=home"> Home </a>
+				</div>
+				
+			</div>
+			
+		</div>
+	</div>
+
+</div>
+	
+{% endblock %}

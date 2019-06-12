@@ -1,0 +1,13 @@
+
+<FilesMatch "\.(css|js|jpg|jpeg|png|gif|ico)$">
+    Allow from all
+</FilesMatch>
+
+<FilesMatch "\.(json)$">
+    Deny from all
+</FilesMatch>
+
+<files index.php> 
+    order allow,deny 
+    allow from all 
+</files>

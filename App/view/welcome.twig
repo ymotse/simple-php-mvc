@@ -1,0 +1,53 @@
+{% extends 'templates/template_default.twig' %}
+
+{% set title_page = 'Welcome' %}
+
+
+{% block content %}
+
+<div>
+
+	<div class="container-fluid">
+		
+		<div class="row m-2">
+			
+			<div class="col-sm-12 p-2 bg-white">
+
+				<h3>PHP MVC</h3>
+
+				<p>This is a basic project structure of MVC Design Pattern in PHP language.</p>
+
+			</div>
+
+		</div>
+		
+		
+		<div class="row m-2">
+			
+			<div class="col-sm-12 p-2 bg-white">
+
+				<h5>PHP MVC</h5>
+				
+				<a href="?ref=testsdb">Oracle, MySQL and MongoDB Connection Tests </a>
+				
+				<p class="text-danger">( It's necessary configuring connections properties in <small class="bg-light">\php-mvc\App\core\config.ini</small> )</p>
+			</div>
+
+		</div>
+		
+
+		<div class="row m-2">
+			
+			<div class="col-sm-12 p-2 bg-white">
+
+				<a href="?ref=login">Form authentication example (MySQL)</a>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+
+{% endblock %}

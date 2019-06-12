@@ -1,0 +1,7 @@
+body {
+    background-color: gainsboro;
+}
+
+.v_w-min-auto {
+    min-width: auto;
+}
